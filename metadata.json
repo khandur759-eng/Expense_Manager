@@ -1,0 +1,7 @@
+{
+  "name": "Expense Manager",
+  "description": "Official showcase, Google Play Store download, and Privacy Policy website for Expense Manager Android app.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
