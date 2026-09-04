@@ -1,16 +1,18 @@
 import { useState } from 'react';
-import { Shield, CheckCircle2, Download, ExternalLink, ArrowRight, Smartphone, Sparkles } from 'lucide-react';
+import { CheckCircle2, Download, ExternalLink, ArrowRight, Smartphone, Sparkles, Coffee } from 'lucide-react';
 import { APP_CONFIG } from '../data/content';
 import { ActivePage } from '../types';
 import PhoneMockup from './PhoneMockup';
 import PlayStoreModal from './PlayStoreModal';
+import CoffeeModal from './CoffeeModal';
 
 interface HeroProps {
-  setActivePage: (page: ActivePage) => void;
+  setActivePage?: (page: ActivePage) => void;
 }
 
 export default function Hero({ setActivePage }: HeroProps) {
   const [isPlayStoreModalOpen, setIsPlayStoreModalOpen] = useState(false);
+  const [isCoffeeModalOpen, setIsCoffeeModalOpen] = useState(false);
 
   return (
     <section id="hero-section" className="relative overflow-hidden pt-8 pb-16 lg:pt-14 lg:pb-24">
@@ -112,14 +114,13 @@ export default function Hero({ setActivePage }: HeroProps) {
                 <span>Download APK</span>
               </a>
 
-              {/* View Privacy Policy Button */}
+              {/* Buy me a coffee Button */}
               <button
-                id="hero-privacy-btn"
-                onClick={() => setActivePage('privacy')}
-                className="flex items-center gap-1.5 px-4 py-3 rounded-2xl bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 font-semibold text-xs sm:text-sm transition-all"
+                id="hero-coffee-btn"
+                onClick={() => setIsCoffeeModalOpen(true)}
+                className="flex items-center gap-2 px-4 py-3 rounded-2xl bg-amber-50 hover:bg-amber-100 text-amber-950 border border-amber-300 font-bold text-xs sm:text-sm transition-all shadow-sm hover:shadow-md cursor-pointer"
               >
-                <Shield className="w-4 h-4 text-emerald-600" />
-                <span>Privacy Policy</span>
+                <span>Buy me a coffee ☕</span>
               </button>
             </div>
 
@@ -145,6 +146,12 @@ export default function Hero({ setActivePage }: HeroProps) {
       <PlayStoreModal
         isOpen={isPlayStoreModalOpen}
         onClose={() => setIsPlayStoreModalOpen(false)}
+      />
+
+      {/* Buy Me a Coffee Contribution Modal */}
+      <CoffeeModal
+        isOpen={isCoffeeModalOpen}
+        onClose={() => setIsCoffeeModalOpen(false)}
       />
     </section>
   );
