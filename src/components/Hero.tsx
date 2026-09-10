@@ -21,9 +21,9 @@ export default function Hero({ setActivePage }: HeroProps) {
       <div className="absolute top-1/3 right-10 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-start">
           {/* Left Column: Copy & CTAs */}
-          <div className="lg:col-span-7 text-left space-y-6">
+          <div className="lg:col-span-5 text-left space-y-6 lg:sticky lg:top-20">
             {/* App Subtitle & Category Tag */}
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-800 text-xs font-semibold">
               <span className="flex h-2 w-2 relative">
@@ -135,8 +135,8 @@ export default function Hero({ setActivePage }: HeroProps) {
             </div>
           </div>
 
-          {/* Right Column: Interactive Android Mockup */}
-          <div className="lg:col-span-5 flex justify-center">
+          {/* Right Column: Interactive Android Mockup & Live Screen Demo */}
+          <div className="lg:col-span-7 flex justify-center w-full">
             <PhoneMockup />
           </div>
         </div>

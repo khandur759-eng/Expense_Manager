@@ -8,7 +8,7 @@ export const APP_CONFIG = {
   developerName: 'khandur759',
   developerEmail: 'khandur759@gmail.com',
   playStoreUrl: 'https://play.google.com/store/apps/details?id=com.khandur759.expensemanager',
-  apkDownloadUrl: 'https://files.catbox.moe/b3i3ak.apk',
+  apkDownloadUrl: 'https://files.catbox.moe/bdcc4p.apk',
   version: '1.0.0',
   androidVersion: 'Android 8.0 (Oreo) or higher',
   appSize: '~8.2 MB',
